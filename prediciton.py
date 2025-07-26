@@ -15,7 +15,7 @@ except:
     print("Model not exist, training model...")
     X, y = fetch_openml("mnist_784", return_X_y=True, as_frame=False)
 
-    model = rnc = RandomForestClassifier(n_estimators=116, max_depth=47, random_state=42, n_jobs=-1)
+    model = rnc = RandomForestClassifier(n_estimators=264, max_depth=64, random_state=42, n_jobs=-1)
     model.fit(X, y)
 
     joblib.dump(model, "./models/rf_clf.joblib")
